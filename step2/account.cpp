@@ -13,7 +13,7 @@ SavingsAccount::SavingsAccount(Date date,string id,double rate)
 :lastDate(date),id(id),rate(rate),balance(0),accumulation(0){
 
     date.show();
-    cout << "\t#" << id << " is created" << endl;   //  制表符\t
+    cout << "\t#" << id << "  created" << endl;   //  制表符\t
 }
 void SavingsAccount::record(Date date, double amount,const string desc) {
     accumulation=accumulate(date);
@@ -42,5 +42,5 @@ void SavingsAccount::settle(Date date) {
     accumulation = 0;
 }
 void SavingsAccount::show()const {
-    cout << "#" << id << "\tBalance: " << balance;
+    cout << id << "\tBalance: " << balance;
 }
